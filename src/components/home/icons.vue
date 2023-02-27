@@ -72,7 +72,6 @@ export default {
     .name-sty{
         margin-top: .2rem;
         color: rgb(68, 68, 67);
-        overflow: hidden;
         width: 60px;
         @include ellipsis()
       }
