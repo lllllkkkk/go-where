@@ -28,9 +28,10 @@ export default {
   background: $bg-color;
   color: #fff;
   line-height: .86rem;
+  display: flex;
   .header-left {
     width: 0.64rem;
-    float: left;
+    // float: left;
     .back-icon{
       text-align: center;
       font-size: .4rem;
@@ -39,7 +40,7 @@ export default {
 
   .header-right {
     width: 1.24rem;
-    float: right;
+    // float: right;
     text-align: center;
     padding-left: .2rem;
     .arrow-icon{

@@ -14,7 +14,7 @@ export default {
 <style lang="scss" scoped>
   .swiper{
     width: 100%;
-    height: 2rem;
+    height: 2.8rem;
     .img-sty{
       width: 100%;
       height: 100%;
