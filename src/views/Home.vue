@@ -1,13 +1,16 @@
 <template>
   <div class="home">
-    ajs
+    <my-header-com></my-header-com>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import Header from '../components/home/header.vue';
 
 export default {
   name: 'Home',
+  components: {
+    MyHeaderCom: Header,
+  },
 };
 </script>
