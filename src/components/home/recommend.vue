@@ -92,5 +92,8 @@ export default {
       color: rgb(255, 204, 0);
     }
   }
+  .div-sty:last-child{
+    border: none;
+  }
 }
 </style>
