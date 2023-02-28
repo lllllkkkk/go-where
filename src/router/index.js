@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import List from '../views/list/list.vue';
+import Info from '../views/info/info.vue';
 
 Vue.use(VueRouter);
 
@@ -12,14 +12,14 @@ const routes = [
     component: Home,
   },
   {
-    path: '/List',
-    name: 'List',
-    component: List,
+    path: '/Info/:id',
+    name: 'Info',
+    component: Info,
   },
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes,
 });

@@ -1,0 +1,21 @@
+<template>
+  <div class="info-banner">
+    <img class="img-sty"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRxqNtC-MkOx6voF60sihFQxkTGp3FgzA9Pdrk3W4m&s" alt="">
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'info-banner',
+};
+</script>
+
+<style lang="scss" scoped>
+.info-banner {
+  .img-sty {
+    width: 100%;
+    height: 3.6rem;
+  }
+}
+</style>

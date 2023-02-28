@@ -2,18 +2,20 @@
   <div class="recommend">
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <div class="div-sty" v-for="(item,index) in recommendList" :key="index">
-        <img class="img-sty" :src="item.imgUrl" alt="">
-        <div class="right-sty">
-          <span class="name-sty">{{ item.name }}</span>
-          <span class="describe-sty">{{ item.describe }}</span>
-          <div style="margin-top: 12px;">
-            <span style="color:rgb(255, 204, 0);font-size: 12px;">¥ </span>
-            <span class="price-sty">{{ item.price }}</span>
-            <span style="font-size:12px;color:rgb(115, 115, 115)"> 起</span>
+        <router-link class="div-sty" v-for="(item, index) in recommendList"
+                     :key="index"
+                     :to="'/info/' + index">
+          <img class="img-sty" :src="item.imgUrl" alt="">
+          <div class="right-sty">
+            <span class="name-sty">{{ item.name }}</span>
+            <span class="describe-sty">{{ item.describe }}</span>
+            <div style="margin-top: 12px;">
+              <span style="color:rgb(255, 204, 0);font-size: 12px;">¥ </span>
+              <span class="price-sty">{{ item.price }}</span>
+              <span style="font-size:12px;color:rgb(115, 115, 115)"> 起</span>
+            </div>
           </div>
-        </div>
-      </div>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -57,43 +59,50 @@ export default {
 <style lang="scss" scoped>
 .recommend {
   margin-top: .4rem;
+
   .recommend-title {
     line-height: .8rem;
     background: #eee;
     text-indent: .2rem;
   }
-  .div-sty{
+
+  .div-sty {
     display: flex;
     padding: .2rem .3rem;
     border-bottom: solid .01rem rgb(181, 179, 179);
-    .img-sty{
+
+    .img-sty {
       width: 2rem;
       height: 1.5rem;
     }
-    .right-sty{
+
+    .right-sty {
       display: flex;
       flex-direction: column;
       margin-left: .2rem;
     }
-    .name-sty{
+
+    .name-sty {
       font-size: .3rem;
       color: black;
       margin-top: 7px;
     }
-    .describe-sty{
+
+    .describe-sty {
       margin-top: 8px;
       font-size: 13px;
       color: rgb(115, 115, 115);
       width: 4rem;
       @include ellipsis()
     }
-    .price-sty{
+
+    .price-sty {
       font-size: 18px;
       color: rgb(255, 204, 0);
     }
   }
-  .div-sty:last-child{
+
+  .div-sty:last-child {
     border: none;
   }
-}
-</style>
+}</style>
