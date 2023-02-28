@@ -25,10 +25,10 @@ export default {
       },
     };
   },
-  activated() {
+  mounted() {
     window.addEventListener('scroll', this.changeScroll);
   },
-  deactivated() {
+  destroyed() {
     window.removeEventListener('scroll', this.changeScroll);
   },
   methods: {
