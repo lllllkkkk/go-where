@@ -28,6 +28,9 @@ export default {
   activated() {
     window.addEventListener('scroll', this.changeScroll);
   },
+  deactivated() {
+    window.removeEventListener('scroll', this.changeScroll);
+  },
   methods: {
     changeScroll() {
       const top = document.documentElement.scrollTop;
@@ -74,6 +77,7 @@ export default {
     justify-content: space-between;
     width: 100%;
     // text-align: center;
+    z-index: 2;
   }
 }
 </style>
