@@ -8,15 +8,23 @@
       输入城市/景点/游玩主题
     </div>
     <div class="header-right">
-      城市
+      {{city}}
     <span class="iconfont arrow-icon">&#xe62d;</span>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'headerCom',
+  computed: {
+    ...mapState(['city']),
+  },
+  created() {
+    // console.log(this.$store.state, 'store');
+  },
 };
 
 </script>
