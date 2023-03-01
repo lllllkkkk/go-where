@@ -28,7 +28,7 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.changeScroll);
   },
-  destroyed() {
+  unmounted() {
     window.removeEventListener('scroll', this.changeScroll);
   },
   methods: {

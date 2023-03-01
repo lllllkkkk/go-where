@@ -8,22 +8,24 @@
       输入城市/景点/游玩主题
     </div>
     <div class="header-right">
-      {{city}}
-    <span class="iconfont arrow-icon">&#xe62d;</span>
+      {{ city }}
+      <span class="iconfont arrow-icon">&#xe62d;</span>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { useStore } from 'vuex';
+import { computed } from 'vue';
 
 export default {
   name: 'headerCom',
-  computed: {
-    ...mapState(['city']),
-  },
-  created() {
-    // console.log(this.$store.state, 'store');
+  setup() {
+    const store = useStore();
+    const city = computed(() => {
+      return store.state.city
+    });
+    return { city }
   },
 };
 
@@ -37,10 +39,12 @@ export default {
   color: #fff;
   line-height: .86rem;
   display: flex;
+
   .header-left {
     width: 0.64rem;
+
     // float: left;
-    .back-icon{
+    .back-icon {
       text-align: center;
       font-size: .4rem;
     }
@@ -51,7 +55,8 @@ export default {
     // float: right;
     text-align: center;
     padding-left: .2rem;
-    .arrow-icon{
+
+    .arrow-icon {
       font-size: .24rem;
       margin-left: -.04rem;
     }
